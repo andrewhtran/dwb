@@ -3,885 +3,779 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DWB Beauty — Strategic Growth Portal</title>
+<title>Growth Proposal · Dr. Whitney Bowe Beauty</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Archivo:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
-  :root{
-    --navy:#0f1729;
-    --navy-soft:#182238;
-    --navy-line:rgba(255,255,255,0.08);
-    --accent:#3b5bdb;
-    --accent-soft:rgba(59,91,219,0.10);
-    --ink:#181b29;
-    --ink-soft:#5c6178;
-    --ink-faint:#8890a4;
-    --bg:#f6f5f1;
-    --card:#ffffff;
-    --border:#e6e3dc;
-    --green:#1a7f4e; --green-bg:#e5f4ec;
-    --yellow:#9c6a12; --yellow-bg:#fbf1dc;
-    --red:#b13b3b; --red-bg:#fbe8e7;
-    --gray:#4b5165; --gray-bg:#eef0f5;
-  }
-  *{box-sizing:border-box;}
-  html,body{margin:0;padding:0;}
-  body{
-    font-family:'Inter',-apple-system,sans-serif;
-    background:var(--bg);
-    color:var(--ink);
-    -webkit-font-smoothing:antialiased;
-  }
-  .app{display:flex;min-height:100vh;}
+:root{
+  --porcelain:#F7FAFC;
+  --blush:#E3EEF4;
+  --blush-deep:#D2E3EC;
+  --rose:#3E7B9E;
+  --rose-soft:#85AFC8;
+  --ink:#212B32;
+  --plum:#22384A;
+  --stone:#7B8A93;
+  --line:#DBE5EB;
+  --white:#FFFFFF;
+  --max:1120px;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  background:var(--porcelain);
+  color:var(--ink);
+  font-family:'Archivo',sans-serif;
+  font-size:16.5px;
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+::selection{background:var(--blush-deep);}
+a{color:var(--rose);text-decoration:none;}
+a:hover{text-decoration:underline;}
+a:focus-visible,button:focus-visible{outline:2px solid var(--rose);outline-offset:3px;border-radius:2px;}
 
-  /* ---------- SIDEBAR ---------- */
-  .sidebar{
-    width:278px;flex-shrink:0;background:var(--navy);
-    display:flex;flex-direction:column;
-    position:fixed;top:0;left:0;bottom:0;overflow-y:auto;
-  }
-  .sidebar-header{padding:2rem 1.6rem 1.4rem;border-bottom:1px solid var(--navy-line);}
-  .sidebar-header .brand{
-    font-family:'Fraunces',serif;font-weight:600;font-size:1.55rem;color:#fff;
-    letter-spacing:.01em;line-height:1.15;
-  }
-  .sidebar-header .brand-sub{
-    display:block;margin-top:.55rem;font-size:.66rem;font-weight:600;
-    letter-spacing:.16em;text-transform:uppercase;color:#7d87a3;
-  }
-  .nav-scroll{flex:1;padding:1.3rem 0 1rem;}
-  .nav-group{margin-bottom:1.5rem;}
-  .nav-group-label{
-    font-size:.64rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
-    color:#5f6883;padding:0 1.6rem;margin-bottom:.5rem;
-  }
-  .nav-item{
-    display:flex;align-items:center;gap:.55rem;
-    padding:.56rem 1.6rem;font-size:.855rem;font-weight:500;color:#aab1c6;
-    cursor:pointer;border-left:3px solid transparent;transition:background .12s,color .12s;
-    user-select:none;
-  }
-  .nav-item:hover{color:#fff;background:rgba(255,255,255,.045);}
-  .nav-item.active{color:#fff;background:var(--accent);border-left-color:#fff;}
-  .nav-dot{width:5px;height:5px;border-radius:50%;background:currentColor;opacity:.55;flex-shrink:0;}
-  .sidebar-footer{
-    padding:1.1rem 1.6rem 1.4rem;border-top:1px solid var(--navy-line);
-    font-size:.7rem;color:#5f6883;line-height:1.5;
-  }
+.wrap{max-width:var(--max);margin:0 auto;padding:0 28px;}
 
-  /* ---------- MAIN ---------- */
-  .content{margin-left:278px;flex:1;padding:2.8rem 3.4rem 5rem;max-width:1180px;}
-  .page{display:none;}
-  .page.active{display:block;animation:fadeIn .25s ease;}
-  @keyframes fadeIn{from{opacity:0;transform:translateY(4px);}to{opacity:1;transform:none;}}
+/* ---------- nav ---------- */
+nav{
+  position:sticky;top:0;z-index:50;
+  background:rgba(247,250,252,.88);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--line);
+}
+.nav-inner{
+  max-width:var(--max);margin:0 auto;padding:14px 28px;
+  display:flex;align-items:center;justify-content:space-between;gap:20px;
+}
+.nav-brand{font-family:'Fraunces',serif;font-weight:600;font-size:17px;letter-spacing:.01em;color:var(--ink);}
+.nav-brand span{color:var(--rose);}
+.nav-links{display:flex;gap:26px;flex-wrap:wrap;}
+.nav-links a{
+  font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--stone);
+}
+.nav-links a:hover{color:var(--rose);text-decoration:none;}
 
-  .page-top{display:flex;align-items:flex-start;justify-content:space-between;gap:2rem;margin-bottom:.4rem;}
-  .eyebrow{
-    font-size:.72rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase;
-    color:var(--accent);margin-bottom:.6rem;display:block;
-  }
-  h1.page-title{
-    font-family:'Fraunces',serif;font-weight:600;font-size:2.15rem;line-height:1.12;
-    margin:0 0 .65rem;color:var(--ink);letter-spacing:-.01em;
-  }
-  .page-subhead{color:var(--ink-soft);font-size:.95rem;line-height:1.55;max-width:640px;margin:0 0 2rem;}
-  .context-pill{
-    flex-shrink:0;border:1px solid var(--border);background:#fff;border-radius:999px;
-    padding:.4rem 1rem;font-size:.72rem;color:var(--ink-soft);white-space:nowrap;margin-top:.2rem;
-    font-weight:500;
-  }
+/* ---------- hero ---------- */
+header{
+  position:relative;overflow:hidden;
+  padding:110px 0 96px;
+}
+header::before{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background:
+    radial-gradient(560px 420px at 82% 18%, rgba(133,175,200,.28), transparent 65%),
+    radial-gradient(480px 380px at 8% 92%, rgba(235,217,214,.55), transparent 60%);
+}
+.hero-inner{position:relative;}
+.eyebrow{
+  font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--rose);margin-bottom:26px;display:block;
+}
+h1{
+  font-family:'Fraunces',serif;font-weight:500;
+  font-size:clamp(44px,7vw,84px);
+  line-height:1.02;letter-spacing:-.015em;
+  text-transform:lowercase;
+  max-width:14ch;
+}
+h1 em{font-style:italic;color:var(--rose);}
+.hero-sub{
+  margin-top:32px;max-width:56ch;font-size:19px;line-height:1.7;color:#47565F;
+}
+.hero-meta{
+  margin-top:48px;display:flex;gap:0;flex-wrap:wrap;border-top:1px solid var(--line);
+}
+.hero-meta div{
+  padding:18px 36px 0 0;margin-right:36px;
+}
+.hero-meta .k{
+  font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--stone);display:block;margin-bottom:4px;
+}
+.hero-meta .v{font-family:'Fraunces',serif;font-size:19px;}
 
-  /* ---------- CARD ---------- */
-  .card{
-    background:var(--card);border:1px solid var(--border);border-radius:14px;
-    box-shadow:0 1px 3px rgba(15,23,41,.04);padding:1.7rem 1.8rem;margin-bottom:1.6rem;
-  }
-  .card-head{display:flex;align-items:center;gap:.65rem;margin-bottom:1.3rem;}
-  .card-head .bar{width:4px;height:1.05rem;background:var(--accent);border-radius:2px;flex-shrink:0;}
-  .card-head .label{font-weight:700;font-size:.98rem;color:var(--ink);}
-  .card-note{font-size:.8rem;color:var(--ink-faint);margin:-.6rem 0 1.1rem;line-height:1.5;}
+/* ---------- shared section furniture ---------- */
+section{padding:88px 0;}
+.sec-head{margin-bottom:52px;max-width:720px;}
+.phase-tag{
+  display:inline-flex;align-items:center;gap:10px;
+  font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--rose);margin-bottom:18px;
+}
+.phase-tag::before{content:"";width:26px;height:1px;background:var(--rose);}
+h2{
+  font-family:'Fraunces',serif;font-weight:500;font-size:clamp(30px,4vw,44px);
+  line-height:1.12;letter-spacing:-.01em;text-transform:lowercase;
+}
+h2 em{font-style:italic;color:var(--rose);}
+.sec-head p{margin-top:18px;color:#47565F;font-size:17px;}
 
-  /* ---------- TABLE ---------- */
-  .tbl-wrap{overflow-x:auto;}
-  table{width:100%;border-collapse:collapse;font-size:.85rem;}
-  th{
-    text-align:left;font-size:.66rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;
-    color:var(--ink-faint);padding:.55rem .6rem;border-bottom:1px solid var(--border);white-space:nowrap;
-  }
-  td{padding:.85rem .6rem;border-bottom:1px solid var(--border);vertical-align:top;line-height:1.5;color:var(--ink);}
-  tr:last-child td{border-bottom:none;}
-  td.dim{font-weight:600;white-space:nowrap;}
-  td.assess{color:var(--ink-soft);max-width:420px;}
+/* ---------- protocol / roadmap ---------- */
+.protocol{border-top:1px solid var(--line);}
+.phases{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);}
+.phase{
+  background:var(--porcelain);padding:32px 26px 36px;position:relative;
+  transition:background .25s ease;
+}
+.phase:hover{background:var(--white);}
+.phase .rx{
+  font-family:'Fraunces',serif;font-style:italic;font-size:15px;color:var(--rose);
+  display:block;margin-bottom:14px;
+}
+.phase h3{
+  font-family:'Fraunces',serif;font-weight:600;font-size:21px;margin-bottom:12px;
+  text-transform:lowercase;
+}
+.phase ul{list-style:none;}
+.phase li{
+  padding:9px 0 9px 18px;position:relative;font-size:14.5px;color:#47565F;
+  border-bottom:1px dashed var(--line);line-height:1.5;
+}
+.phase li:last-child{border-bottom:none;}
+.phase li::before{
+  content:"";position:absolute;left:0;top:16px;width:6px;height:6px;border-radius:50%;
+  background:var(--rose-soft);
+}
 
-  /* ---------- PILLS ---------- */
-  .pill{
-    display:inline-flex;align-items:center;gap:.3rem;padding:.24rem .62rem;border-radius:999px;
-    font-size:.7rem;font-weight:700;white-space:nowrap;
-  }
-  .pill-green{background:var(--green-bg);color:var(--green);}
-  .pill-yellow{background:var(--yellow-bg);color:var(--yellow);}
-  .pill-red{background:var(--red-bg);color:var(--red);}
-  .pill-blue{background:var(--accent-soft);color:var(--accent);}
-  .pill-gray{background:var(--gray-bg);color:var(--gray);}
+/* ---------- tech stack ---------- */
+.stack{background:var(--white);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+.tools{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;}
+.tool{
+  border:1px solid var(--line);border-radius:4px;background:var(--porcelain);
+  padding:24px 22px;display:flex;flex-direction:column;gap:10px;
+  transition:transform .2s ease, box-shadow .2s ease;
+}
+.tool:hover{transform:translateY(-3px);box-shadow:0 10px 28px rgba(23,45,61,.08);}
+.tool .name{font-family:'Fraunces',serif;font-weight:600;font-size:19px;}
+.tool .name a{color:var(--ink);}
+.tool .role{
+  font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--stone);
+}
+.tool p{font-size:14px;color:#47565F;flex:1;}
+.badge{
+  align-self:flex-start;font-family:'IBM Plex Mono',monospace;font-size:10px;
+  letter-spacing:.1em;text-transform:uppercase;padding:4px 10px;border-radius:99px;
+}
+.badge.have{background:#E7EFE6;color:#4C6B4A;}
+.badge.rec{background:var(--blush);color:var(--rose);}
+.badge.cond{background:#F1ECE0;color:#8A7440;}
 
-  .conf-dots{display:inline-flex;gap:3px;margin-left:.45rem;vertical-align:middle;}
-  .conf-dots .d{width:5px;height:5px;border-radius:50%;background:var(--border);}
-  .conf-dots .d.on{background:var(--accent);}
+/* ---------- media ---------- */
+.platforms{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-bottom:72px;}
+.platform{
+  border:1px solid var(--line);border-radius:4px;padding:30px 26px;background:var(--white);
+}
+.platform .num{
+  font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.14em;color:var(--stone);
+  text-transform:uppercase;display:block;margin-bottom:14px;
+}
+.platform h3{font-family:'Fraunces',serif;font-weight:600;font-size:24px;text-transform:lowercase;margin-bottom:10px;}
+.platform p{font-size:14.5px;color:#47565F;}
 
-  /* ---------- ROADMAP ---------- */
-  .roadmap-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;}
-  @media(max-width:980px){.roadmap-grid{grid-template-columns:1fr;}}
-  .phase-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:1.5rem 1.5rem 1.6rem;box-shadow:0 1px 3px rgba(15,23,41,.04);}
-  .phase-card h3{font-family:'Fraunces',serif;font-size:1.15rem;margin:0 0 .2rem;color:var(--ink);}
-  .phase-card .phase-range{font-size:.7rem;color:var(--ink-faint);letter-spacing:.05em;text-transform:uppercase;font-weight:600;margin-bottom:1.1rem;display:block;}
-  .work-item{border-top:1px solid var(--border);padding:.85rem 0;}
-  .work-item:first-of-type{border-top:none;}
-  .work-item .pillar-tag{font-size:.62rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);}
-  .work-item .ws-title{font-weight:600;font-size:.87rem;margin:.25rem 0 .3rem;color:var(--ink);}
-  .work-item .ws-meta{font-size:.76rem;color:var(--ink-soft);line-height:1.5;}
-  .work-item .ws-meta b{color:var(--ink);font-weight:600;}
+/* timeline — the dose schedule */
+.schedule{
+  background:var(--plum);color:#EAF2F6;border-radius:6px;
+  padding:56px 48px 64px;position:relative;overflow:hidden;
+}
+.schedule::after{
+  content:"";position:absolute;right:-120px;top:-120px;width:380px;height:380px;border-radius:50%;
+  background:radial-gradient(circle, rgba(133,175,200,.35), transparent 70%);
+}
+.schedule .phase-tag{color:var(--rose-soft);}
+.schedule .phase-tag::before{background:var(--rose-soft);}
+.schedule h3{
+  font-family:'Fraunces',serif;font-weight:500;font-size:clamp(26px,3.4vw,36px);
+  text-transform:lowercase;max-width:22ch;line-height:1.15;position:relative;z-index:1;
+}
+.schedule .lede{margin-top:16px;max-width:60ch;color:#C2D4DE;font-size:15.5px;position:relative;z-index:1;}
+.timeline{margin-top:52px;position:relative;z-index:1;}
+.timeline-track{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:22px;position:relative;padding-top:34px;
+}
+.timeline-track::before{
+  content:"";position:absolute;top:8px;left:8px;right:8px;height:1px;
+  background:rgba(234,242,246,.25);
+}
+.tl-item{position:relative;}
+.tl-item::before{
+  content:"";position:absolute;top:-30px;left:0;width:9px;height:9px;border-radius:50%;
+  background:var(--rose-soft);box-shadow:0 0 0 5px rgba(133,175,200,.18);
+}
+.tl-item .date{
+  font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.1em;color:var(--rose-soft);
+  display:block;margin-bottom:6px;text-transform:uppercase;
+}
+.tl-item .show{font-family:'Fraunces',serif;font-size:18px;font-weight:600;line-height:1.25;}
+.tl-item .topic{font-size:13.5px;color:#AFC5D1;margin-top:4px;}
+.schedule .note{
+  margin-top:48px;padding-top:24px;border-top:1px solid rgba(234,242,246,.18);
+  font-size:14.5px;color:#C2D4DE;max-width:70ch;position:relative;z-index:1;
+}
+.schedule .note strong{color:#EAF2F6;font-weight:600;}
 
-  /* ---------- KPI ---------- */
-  .kpi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.3rem;}
-  @media(max-width:980px){.kpi-grid{grid-template-columns:repeat(2,1fr);}}
-  @media(max-width:640px){.kpi-grid{grid-template-columns:1fr;}}
-  .kpi-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:1.4rem 1.5rem;box-shadow:0 1px 3px rgba(15,23,41,.04);}
-  .kpi-card .kpi-label{font-size:.7rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:.6rem;}
-  .kpi-card .kpi-value{font-family:'Fraunces',serif;font-size:1.85rem;font-weight:600;color:var(--ink);line-height:1;}
-  .kpi-card .kpi-target{font-size:.78rem;color:var(--accent);font-weight:600;margin-top:.5rem;}
-  .kpi-card .kpi-note{font-size:.76rem;color:var(--ink-soft);margin-top:.35rem;line-height:1.5;}
+/* ---------- tracking sheet strip ---------- */
+.strip{
+  display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center;
+}
+.sheet-mock{
+  background:var(--white);border:1px solid var(--line);border-radius:6px;overflow:hidden;
+  box-shadow:0 18px 44px rgba(23,45,61,.08);
+  font-family:'IBM Plex Mono',monospace;font-size:11px;
+}
+.sheet-mock .bar{display:flex;gap:6px;padding:10px 14px;border-bottom:1px solid var(--line);background:var(--porcelain);}
+.sheet-mock .bar i{width:9px;height:9px;border-radius:50%;background:var(--blush-deep);}
+.sheet-mock table{width:100%;border-collapse:collapse;}
+.sheet-mock th{
+  text-align:left;padding:9px 12px;background:var(--blush);color:var(--rose);
+  letter-spacing:.08em;text-transform:uppercase;font-weight:500;font-size:10px;
+}
+.sheet-mock td{padding:9px 12px;border-top:1px solid var(--line);color:#47565F;}
+.sheet-mock td.win{color:#4C6B4A;}
+.sheet-mock td.lose{color:#A8544F;}
 
-  /* ---------- LIST CARDS (opportunities/risks) ---------- */
-  .item-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:1.3rem 1.5rem;margin-bottom:1rem;box-shadow:0 1px 3px rgba(15,23,41,.04);}
-  .item-card .item-head{display:flex;align-items:center;justify-content:space-between;gap:1rem;margin-bottom:.55rem;}
-  .item-card .item-title{font-weight:700;font-size:.92rem;color:var(--ink);}
-  .item-card .item-body{font-size:.85rem;color:var(--ink-soft);line-height:1.6;}
-  .item-card .item-body b{color:var(--ink);font-weight:600;}
+/* ---------- content engine / two-col cards ---------- */
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+.card{
+  border:1px solid var(--line);border-radius:4px;background:var(--white);padding:34px 30px;
+}
+.card h3{font-family:'Fraunces',serif;font-weight:600;font-size:22px;text-transform:lowercase;margin-bottom:12px;}
+.card p{font-size:15px;color:#47565F;}
+.card + .card{}
+.card ul{list-style:none;margin-top:14px;}
+.card li{
+  padding:8px 0 8px 20px;position:relative;font-size:14.5px;color:#47565F;
+}
+.card li::before{
+  content:"";position:absolute;left:0;top:15px;width:7px;height:7px;border-radius:50%;
+  background:var(--blush-deep);
+}
 
-  .rec-list{margin:0;padding:0;list-style:none;}
-  .rec-list li{
-    padding:1rem 0 1rem 1.9rem;border-top:1px solid var(--border);position:relative;
-    font-size:.9rem;color:var(--ink-soft);line-height:1.6;
-  }
-  .rec-list li:first-child{border-top:none;}
-  .rec-list li::before{
-    content:'';position:absolute;left:0;top:1.35rem;width:8px;height:8px;border-radius:50%;background:var(--accent);
-  }
-  .rec-list li b{color:var(--ink);}
+/* ---------- lead magnet ---------- */
+.magnet{
+  background:linear-gradient(135deg,var(--blush) 0%,#F0F6F9 60%,var(--porcelain) 100%);
+  border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+}
+.magnet .grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;}
+.scan{
+  aspect-ratio:1/1.05;max-width:400px;margin:0 auto;position:relative;width:100%;
+}
+.scan svg{width:100%;height:100%;display:block;}
+.magnet ol{list-style:none;counter-reset:step;margin-top:26px;}
+.magnet ol li{
+  counter-increment:step;padding:14px 0 14px 52px;position:relative;
+  border-bottom:1px dashed var(--blush-deep);font-size:15px;color:#47565F;
+}
+.magnet ol li:last-child{border-bottom:none;}
+.magnet ol li::before{
+  content:counter(step,decimal-leading-zero);
+  position:absolute;left:0;top:12px;
+  font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--rose);
+  border:1px solid var(--rose-soft);border-radius:99px;padding:3px 8px;
+}
 
-  .footnote{font-size:.76rem;color:var(--ink-faint);margin-top:1.6rem;line-height:1.6;}
+/* ---------- team ---------- */
+.roles{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+.role-card{
+  border:1px solid var(--line);border-radius:4px;background:var(--white);padding:28px 24px;
+}
+.role-card h3{font-family:'Fraunces',serif;font-weight:600;font-size:20px;text-transform:lowercase;margin-bottom:8px;}
+.role-card p{font-size:14px;color:#47565F;}
+.role-card .solved{
+  margin-top:14px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.08em;
+  text-transform:uppercase;color:var(--rose);
+}
 
-  ::-webkit-scrollbar{width:8px;height:8px;}
-  ::-webkit-scrollbar-thumb{background:rgba(255,255,255,.1);border-radius:8px;}
-  .sidebar::-webkit-scrollbar-thumb{background:rgba(255,255,255,.12);}
+/* ---------- engagement ---------- */
+.engage{background:var(--white);border-top:1px solid var(--line);}
+.offers{display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:stretch;}
+.offer{
+  border:1px solid var(--line);border-radius:6px;padding:40px 36px;background:var(--porcelain);
+  display:flex;flex-direction:column;
+}
+.offer.featured{
+  background:var(--plum);color:#EAF2F6;border-color:var(--plum);
+  box-shadow:0 24px 56px rgba(23,45,61,.22);
+}
+.offer .tier{
+  font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--rose);margin-bottom:16px;
+}
+.offer.featured .tier{color:var(--rose-soft);}
+.offer h3{font-family:'Fraunces',serif;font-weight:500;font-size:28px;text-transform:lowercase;line-height:1.15;}
+.offer .price{
+  margin:24px 0 6px;font-family:'Fraunces',serif;font-size:44px;font-weight:500;letter-spacing:-.01em;
+}
+.offer .price small{font-size:16px;font-family:'Archivo',sans-serif;color:var(--stone);font-weight:400;}
+.offer.featured .price small{color:#AFC5D1;}
+.offer .terms{
+  font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--stone);line-height:1.9;
+  padding-bottom:22px;border-bottom:1px solid var(--line);margin-bottom:22px;
+}
+.offer.featured .terms{color:#AFC5D1;border-color:rgba(234,242,246,.2);}
+.offer ul{list-style:none;flex:1;}
+.offer li{padding:8px 0 8px 26px;position:relative;font-size:15px;}
+.offer li::before{
+  content:"✓";position:absolute;left:0;top:8px;color:var(--rose);font-size:14px;
+}
+.offer.featured li::before{color:var(--rose-soft);}
+.offer li small{display:block;font-size:12.5px;color:var(--stone);}
+.offer.featured li small{color:#AFC5D1;}
 
-  @media(max-width:860px){
-    .sidebar{position:relative;width:100%;height:auto;}
-    .content{margin-left:0;padding:2rem 1.4rem 4rem;}
-    .app{flex-direction:column;}
-  }
+/* ---------- footer ---------- */
+footer{padding:72px 0 60px;border-top:1px solid var(--line);}
+.foot{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;flex-wrap:wrap;}
+.foot h2{max-width:16ch;}
+.foot .fine{
+  font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--stone);line-height:2;
+  text-align:right;
+}
+
+/* reveal on scroll */
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease;}
+.reveal.in{opacity:1;transform:none;}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto;}
+  .reveal{opacity:1;transform:none;transition:none;}
+  .tool:hover{transform:none;}
+}
+
+/* ---------- responsive ---------- */
+@media (max-width:980px){
+  .phases{grid-template-columns:1fr 1fr;}
+  .tools{grid-template-columns:1fr 1fr;}
+  .platforms{grid-template-columns:1fr;}
+  .timeline-track{grid-template-columns:1fr 1fr;row-gap:44px;}
+  .timeline-track::before{display:none;}
+  .tl-item{padding-left:22px;}
+  .tl-item::before{top:5px;}
+  .strip,.magnet .grid,.duo,.offers{grid-template-columns:1fr;}
+  .roles{grid-template-columns:1fr 1fr;}
+  .foot .fine{text-align:left;}
+}
+@media (max-width:600px){
+  section{padding:64px 0;}
+  header{padding:80px 0 64px;}
+  .phases,.tools,.roles,.timeline-track{grid-template-columns:1fr;}
+  .nav-links{display:none;}
+  .schedule{padding:40px 26px 48px;}
+  .hero-meta div{margin-right:24px;padding-right:0;}
+}
 </style>
 </head>
 <body>
-<div class="app">
 
-  <!-- ============ SIDEBAR ============ -->
-  <aside class="sidebar">
-    <div class="sidebar-header">
-      <span class="brand">DWB Beauty</span>
-      <span class="brand-sub">Strategic Growth Portal</span>
+<nav>
+  <div class="nav-inner">
+    <div class="nav-brand">DWB <span>×</span> Growth</div>
+    <div class="nav-links">
+      <a href="#protocol">Protocol</a>
+      <a href="#stack">Tech Stack</a>
+      <a href="#media">Media</a>
+      <a href="#content">Content</a>
+      <a href="#magnet">Lead Magnet</a>
+      <a href="#team">Team</a>
+      <a href="#engage">Engagement</a>
+    </div>
+  </div>
+</nav>
+
+<header>
+  <div class="wrap hero-inner">
+    <span class="eyebrow">Confidential Proposal · GM / Chief Growth Officer · Dr. Whitney Bowe Beauty</span>
+    <h1>a clinical <em>protocol</em> for growth</h1>
+    <p class="hero-sub">
+      DWB's formulas are built on published clinical evidence. The marketing engine should be held to the same standard: diagnose the current state, prescribe the right stack, treat the growth levers with real spend, and measure everything against true cost per new customer.
+    </p>
+    <div class="hero-meta">
+      <div><span class="k">Phase 01</span><span class="v">Diagnose</span></div>
+      <div><span class="k">Phase 02</span><span class="v">Prescribe</span></div>
+      <div><span class="k">Phase 03</span><span class="v">Treat</span></div>
+      <div><span class="k">Phase 04</span><span class="v">Sustain</span></div>
+    </div>
+  </div>
+</header>
+
+<section class="protocol" id="protocol">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="phase-tag">The Roadmap</span>
+      <h2>four phases, in order — <em>no guesswork</em></h2>
+      <p>Each phase gates the next. We don't scale spend until attribution is trustworthy, and we don't rebuild the site until the audits tell us exactly what's leaking.</p>
+    </div>
+    <div class="phases reveal">
+      <div class="phase">
+        <span class="rx">Rx / Phase 01</span>
+        <h3>diagnose</h3>
+        <ul>
+          <li>Full tech stack &amp; website review</li>
+          <li>Full ad account audit across every active platform</li>
+          <li>Full data attribution and analytics audit</li>
+          <li>Baseline the numbers: what does a new customer actually cost today?</li>
+        </ul>
+      </div>
+      <div class="phase">
+        <span class="rx">Rx / Phase 02</span>
+        <h3>prescribe</h3>
+        <ul>
+          <li>Tech stack recommendations &amp; consolidation</li>
+          <li>Revamp data attribution and reporting</li>
+          <li>Establish <strong>true cost per new customer</strong> as the north-star metric</li>
+          <li>Stand up the shared ad tracking sheet</li>
+        </ul>
+      </div>
+      <div class="phase">
+        <span class="rx">Rx / Phase 03</span>
+        <h3>treat</h3>
+        <ul>
+          <li>Concentrate spend on three platforms: Meta, Google, CTV</li>
+          <li>Scale UGC &amp; whitelisted ads via commission-based creators</li>
+          <li>Launch the AI Skin Analysis lead magnet</li>
+          <li>Surge spend around Dr. Bowe's TV appearances</li>
+        </ul>
+      </div>
+      <div class="phase">
+        <span class="rx">Rx / Phase 04</span>
+        <h3>sustain</h3>
+        <ul>
+          <li>Revamp the full website — or at minimum, every product page</li>
+          <li>Fill the missing roles with the right contractors</li>
+          <li>Weekly automated reporting into Slack</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="stack" id="stack">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="phase-tag">Phase 02 · Prescribe</span>
+      <h2>the recommended <em>tech stack</em></h2>
+      <p>Eight tools, each with one job. Two are already in place — the rest have been demo'd and vetted, not picked off a listicle.</p>
+    </div>
+    <div class="tools reveal">
+      <div class="tool">
+        <span class="badge rec">Recommended</span>
+        <div class="name"><a href="https://www.triplewhale.com/" target="_blank" rel="noopener">Triple Whale</a></div>
+        <span class="role">Attribution &amp; Data Analytics</span>
+        <p>One source of truth across platforms, so spend decisions run on real numbers rather than each channel's self-graded homework.</p>
+      </div>
+      <div class="tool">
+        <span class="badge have">Already Have</span>
+        <div class="name">Klaviyo</div>
+        <span class="role">Email Marketing</span>
+        <p>Keep it. The upgrade is in segmentation — especially once skin-analysis data starts flowing in.</p>
+      </div>
+      <div class="tool">
+        <span class="badge rec">Recommended</span>
+        <div class="name">Atria</div>
+        <span class="role">Ads Management &amp; Creative Workflow</span>
+        <p>Creative research, briefing, and iteration in one workflow. Higgsfield is also excellent in this category.</p>
+      </div>
+      <div class="tool">
+        <span class="badge rec">Recommended</span>
+        <div class="name">Chaser or Viktor</div>
+        <span class="role">Project Management</span>
+        <p>Runs marketing project management now, and doubles as the interim PM layer until a dedicated hire makes sense.</p>
+      </div>
+      <div class="tool">
+        <span class="badge rec">Recommended</span>
+        <div class="name">Octolens</div>
+        <span class="role">Social Listening</span>
+        <p>Catch mentions, trends, and creator conversations about DWB and the category as they happen.</p>
+      </div>
+      <div class="tool">
+        <span class="badge rec">Recommended</span>
+        <div class="name"><a href="http://haut.ai" target="_blank" rel="noopener">Haut.ai</a></div>
+        <span class="role">AI Skin Analysis</span>
+        <p>The engine behind the lead magnet. Demo'd several competitors — Haut.ai wins on simplicity and customization.</p>
+      </div>
+      <div class="tool">
+        <span class="badge have">Already Have</span>
+        <div class="name">Gorgias</div>
+        <span class="role">Customer Service</span>
+        <p>Keep it, and staff it with trained VAs to keep response times fast and costs lean.</p>
+      </div>
+      <div class="tool">
+        <span class="badge cond">If Needed</span>
+        <div class="name">Trybe</div>
+        <span class="role">Commission-Based UGC</span>
+        <p>Only necessary if post-purchase video review offers aren't producing enough volume on their own.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="media">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="phase-tag">Phase 03 · Treat</span>
+      <h2>three platforms, <em>full focus</em></h2>
+      <p>Spreading budget across six channels means mastering none. We concentrate on the three where DWB's audience actually is — and where Dr. Bowe's media presence gives us an unfair advantage.</p>
+    </div>
+    <div class="platforms reveal">
+      <div class="platform">
+        <span class="num">Platform / Meta</span>
+        <h3>meta</h3>
+        <p>The workhorse for skincare DTC. UGC, whitelisted creator ads, and clinical-proof creative, tested systematically through the tracking sheet.</p>
+      </div>
+      <div class="platform">
+        <span class="num">Platform / Google</span>
+        <h3>google + youtube</h3>
+        <p>Capture high-intent search on Dr. Bowe's name, skin cycling, and category terms — plus YouTube, where her long-form authority content already lives.</p>
+      </div>
+      <div class="platform">
+        <span class="num">Platform / CTV</span>
+        <h3>ctv via vibe.co</h3>
+        <p>Connected TV through <a href="http://vibe.co" target="_blank" rel="noopener">Vibe.co</a>, targeting the audiences of the exact shows Dr. Bowe appears on — GMA, Drew Barrymore, The View.</p>
+      </div>
     </div>
 
-    <nav class="nav-scroll">
-      <div class="nav-group">
-        <div class="nav-group-label">Executive Overview</div>
-        <div class="nav-item active" data-page="exec-summary"><span class="nav-dot"></span>Executive Summary</div>
-        <div class="nav-item" data-page="roadmap"><span class="nav-dot"></span>90-Day Roadmap</div>
-        <div class="nav-item" data-page="kpi"><span class="nav-dot"></span>KPI Dashboard</div>
-      </div>
-
-      <div class="nav-group">
-        <div class="nav-group-label">Diagnostic</div>
-        <div class="nav-item" data-page="current-state"><span class="nav-dot"></span>Current State Assessment</div>
-        <div class="nav-item" data-page="benchmark"><span class="nav-dot"></span>Competitor Benchmark</div>
-      </div>
-
-      <div class="nav-group">
-        <div class="nav-group-label">Growth Strategy</div>
-        <div class="nav-item" data-page="op-foundation"><span class="nav-dot"></span>Operational Foundation</div>
-        <div class="nav-item" data-page="website-seo"><span class="nav-dot"></span>Website, SEO &amp; Ecommerce</div>
-        <div class="nav-item" data-page="paid-retention"><span class="nav-dot"></span>Paid Ads &amp; Retention Systems</div>
-        <div class="nav-item" data-page="content-social"><span class="nav-dot"></span>Content &amp; Social</div>
-      </div>
-
-      <div class="nav-group">
-        <div class="nav-group-label">Opportunities &amp; Risks</div>
-        <div class="nav-item" data-page="opportunities"><span class="nav-dot"></span>Key Opportunities</div>
-        <div class="nav-item" data-page="risks"><span class="nav-dot"></span>Key Risks</div>
-        <div class="nav-item" data-page="final-recs"><span class="nav-dot"></span>Final Recommendations</div>
-      </div>
-    </nav>
-
-    <div class="sidebar-footer">Prepared by eComm Cartel · July 2026</div>
-  </aside>
-
-  <!-- ============ MAIN CONTENT ============ -->
-  <main class="content">
-
-    <!-- ============ EXECUTIVE SUMMARY ============ -->
-    <section class="page active" id="exec-summary">
-      <div class="page-top">
-        <div>
-          <span class="eyebrow">01 · Executive Overview</span>
-          <h1 class="page-title">Executive Summary</h1>
-          <p class="page-subhead">A one-page synthesis of research, diagnostic, strategy, and roadmap — built for Dr. Whitney Bowe and the incoming leadership team ahead of the SAFE round close.</p>
+    <div class="schedule reveal">
+      <span class="phase-tag">The Signature Play</span>
+      <h3>surge spend when dr. bowe is on national tv</h3>
+      <p class="lede">Every appearance warms millions of viewers at zero media cost. The move is to increase ad spend immediately after each segment — especially on CTV, where we can target that same show's audience while the appearance is still fresh.</p>
+      <div class="timeline">
+        <div class="timeline-track">
+          <div class="tl-item">
+            <span class="date">Jan 30 · 2026</span>
+            <div class="show">The Drew Barrymore Show</div>
+            <div class="topic">Winter skincare</div>
+          </div>
+          <div class="tl-item">
+            <span class="date">May 20 · 2026</span>
+            <div class="show">Good Morning America</div>
+            <div class="topic">Summer sun myths</div>
+          </div>
+          <div class="tl-item">
+            <span class="date">Jun 06 · 2026</span>
+            <div class="show">Good Morning America</div>
+            <div class="topic">Teen summer routine</div>
+          </div>
+          <div class="tl-item">
+            <span class="date">Jun 10 · 2026</span>
+            <div class="show">Good Morning America</div>
+            <div class="topic">New sunscreen ingredient</div>
+          </div>
         </div>
-        <span class="context-pill">New York, NY · DTC-First</span>
       </div>
+      <p class="note"><strong>Always-on CTV targeting:</strong> beyond surge moments, we run continuous CTV campaigns against the audiences of every show Dr. Bowe has appeared on — people who have literally already seen her recommend skincare on television.</p>
+    </div>
+  </div>
+</section>
 
+<section>
+  <div class="wrap strip">
+    <div class="reveal">
+      <span class="phase-tag">Phase 02 · Prescribe</span>
+      <h2>one sheet the whole team can <em>read</em></h2>
+      <p style="margin-top:18px;color:#47565F;">A <a href="https://docs.google.com/spreadsheets/d/1aVjV_QhxF8Vtr7Yj75mEqFOpCf1d7aH_4MLoJtARsvQ/edit?usp=sharing" target="_blank" rel="noopener">simple ad tracking sheet</a> makes every test visible: which angles, creatives, and hooks have been run — and what actually happened. No more re-testing what already failed, no more institutional knowledge living in one person's head.</p>
+      <p style="margin-top:14px;color:#47565F;">Results summarize into Slack automatically, every week.</p>
+    </div>
+    <div class="sheet-mock reveal" aria-hidden="true">
+      <div class="bar"><i></i><i></i><i></i></div>
+      <table>
+        <thead><tr><th>Angle</th><th>Hook</th><th>CPA</th><th>Verdict</th></tr></thead>
+        <tbody>
+          <tr><td>Skin cycling</td><td>Derm explains 4 nights</td><td>$31.20</td><td class="win">Scale</td></tr>
+          <tr><td>Clinical proof</td><td>3 published studies</td><td>$38.75</td><td class="win">Scale</td></tr>
+          <tr><td>Barrier repair</td><td>Winter flare-up POV</td><td>$52.10</td><td>Iterate</td></tr>
+          <tr><td>Anti-aging</td><td>Generic before/after</td><td>$74.40</td><td class="lose">Kill</td></tr>
+          <tr><td>As seen on GMA</td><td>TV clip + testimonial</td><td>$27.90</td><td class="win">Scale</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="stack" id="content">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="phase-tag">The Content Engine</span>
+      <h2>a pipeline that doesn't <em>bottleneck</em></h2>
+      <p>The full content pipeline is mapped end-to-end <a href="https://ecommcartel.co/dwb/content-pipeline" target="_blank" rel="noopener">here</a> — and many of the roles in it can be combined into fewer, sharper hires.</p>
+    </div>
+    <div class="duo reveal">
       <div class="card">
-        <div class="card-head"><span class="bar"></span><span class="label">Overall Business Health</span></div>
-        <p style="color:var(--ink-soft);font-size:.92rem;line-height:1.7;margin:0;">
-          DWB Beauty is a fast-growing, well-differentiated clinical skincare brand — $4.9M revenue in 2025 (+70% YoY), targeting ~$7.5M in 2026 (+50–60%), with improving unit economics (Q1 2026 gross margin 87%, up from 84%; LTV/CAC 3.7x). The brand's core asset — Dr. Bowe's clinical credibility, 25 completed studies, and 3 peer-reviewed publications — is genuinely strong and stands out even against a competitive set of well-funded dermatologist and physician-dispensed brands. The gap is operational, not brand-level: the infrastructure behind the brand (website/ecommerce ownership, paid marketing access, project management, marketing tech stack) hasn't kept pace with growth, and this comes to a head right as DWB closes a friends-and-family SAFE round extension targeted for July 31, 2026.
-        </p>
+        <h3>right now: post-purchase video reviews</h3>
+        <p>To ease pressure on the pipeline and cashflow immediately, we run a post-purchase offer incentivizing video reviews. Need volume fast? Blast the offer to the highest-engaged email segments — the creators are already customers.</p>
       </div>
-
       <div class="card">
-        <div class="card-head"><span class="bar"></span><span class="label">Top 3 Strengths</span></div>
-        <ul class="rec-list">
-          <li><b>Clinical validation &amp; credibility</b> — 25 independent clinical studies, 3 published in peer-reviewed dermatology journals, and Dr. Bowe's own credentials (Yale/UPenn, 22 "Top Doctor" awards) produced the highest trust-signal score in the competitive benchmark, tied with Dr. Dennis Gross and Dr. Idriss.</li>
-          <li><b>Financial trajectory</b> — 70% revenue growth in 2025, accelerating unit economics into 2026 (AOV +65% YoY, gross profit +24% YoY), and organically strong retention (38% loyalty rate, 40%+ hero-SKU retention) despite no dedicated retention infrastructure yet in place.</li>
-          <li><b>Social/content foundation</b> — 1.3M followers and 7 videos generating 11.2M+ views in six months, backed by 39+ TV appearances in 2025 self-reported to drive a 4–5x sales lift.</li>
+        <h3>at scale: commission-based ugc via trybe</h3>
+        <p>Trybe scales UGC and whitelisted ads on a commission model — creators earn when they sell, so spend stays tied to performance.</p>
+        <ul>
+          <li>Focus on 40+ influencers, matching DWB's core customer</li>
+          <li>Whitelisted ads run through creator handles for native trust</li>
         </ul>
       </div>
-
       <div class="card">
-        <div class="card-head"><span class="bar"></span><span class="label">Top 3 Weaknesses</span></div>
-        <ul class="rec-list">
-          <li><b>No dedicated Project Manager</b> — in Andrew's own words: "each connecting arrow is a potential bottleneck." Every other operational gap depends on this one closing first.</li>
-          <li><b>No confirmed website/ecommerce ownership</b> — Shopify management, development, and UI/UX all sit unfilled, even as Q1 2026 AOV and conversion rate are already improving and need protecting.</li>
-          <li><b>Unresolved paid marketing (Meta) access</b> — directly threatens the fall 2026 revenue initiatives (eye cream launch, ABC Deals &amp; Steals, holiday season).</li>
+        <h3>one studio, four disciplines</h3>
+        <p>Find a creative or studio that handles photography, videography, graphic design, and video editing under one roof — with a good aesthetic eye, using AI for efficiency, never for deliverables.</p>
+      </div>
+      <div class="card">
+        <h3>design + development, one person</h3>
+        <p>A UI/UX designer who is also a developer, specialized in Shopify and eCommerce, owns the product page and site revamp. I already have a vetted contractor for this.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="magnet" id="magnet">
+  <div class="wrap grid">
+    <div class="scan reveal" aria-hidden="true">
+      <svg viewBox="0 0 400 420" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <radialGradient id="glow" cx="50%" cy="42%" r="60%">
+            <stop offset="0%" stop-color="#E3EEF4"/>
+            <stop offset="100%" stop-color="#F7FAFC" stop-opacity="0"/>
+          </radialGradient>
+        </defs>
+        <circle cx="200" cy="185" r="160" fill="url(#glow)"/>
+        <!-- face silhouette -->
+        <path d="M200 70 C150 70 122 108 122 160 C122 196 132 226 148 250 C160 268 158 286 150 300 L250 300 C242 286 240 268 252 250 C268 226 278 196 278 160 C278 108 250 70 200 70 Z"
+              fill="none" stroke="#3E7B9E" stroke-width="1.6"/>
+        <!-- scan lines -->
+        <g stroke="#85AFC8" stroke-width="1" opacity="0.55">
+          <line x1="110" y1="130" x2="290" y2="130"/>
+          <line x1="104" y1="170" x2="296" y2="170"/>
+          <line x1="106" y1="210" x2="294" y2="210"/>
+          <line x1="118" y1="250" x2="282" y2="250"/>
+        </g>
+        <!-- data points -->
+        <g fill="#3E7B9E">
+          <circle cx="162" cy="150" r="3.5"/><circle cx="238" cy="150" r="3.5"/>
+          <circle cx="200" cy="196" r="3.5"/><circle cx="176" cy="238" r="3.5"/>
+        </g>
+        <!-- callouts -->
+        <g font-family="IBM Plex Mono, monospace" font-size="10.5" fill="#7B8A93" letter-spacing="1">
+          <line x1="238" y1="150" x2="318" y2="118" stroke="#85AFC8" stroke-width="1"/>
+          <text x="300" y="110">HYDRATION 62%</text>
+          <line x1="162" y1="150" x2="76" y2="122" stroke="#85AFC8" stroke-width="1" />
+          <text x="20" y="114">TEXTURE 78%</text>
+          <line x1="176" y1="238" x2="84" y2="272" stroke="#85AFC8" stroke-width="1"/>
+          <text x="22" y="288">BARRIER 71%</text>
+          <line x1="200" y1="196" x2="316" y2="228" stroke="#85AFC8" stroke-width="1"/>
+          <text x="292" y="248">REDNESS 24%</text>
+        </g>
+        <text x="200" y="376" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="11" fill="#3E7B9E" letter-spacing="2">AI SKIN ANALYSIS · POWERED BY HAUT.AI</text>
+      </svg>
+    </div>
+    <div class="reveal">
+      <span class="phase-tag">The Lead Magnet</span>
+      <h2>free ai skin analysis as the <em>front door</em></h2>
+      <p style="margin-top:18px;color:#47565F;">A VISIA-style skin analysis, free, on the site — powered by <a href="http://haut.ai" target="_blank" rel="noopener">Haut.ai</a>. After demoing several competitors, Haut.ai wins clearly on simplicity and customization. It's the perfect lead magnet for a dermatologist-founded brand: diagnostic first, product second.</p>
+      <ol>
+        <li>Visitor uploads a selfie and gets an instant, personalized skin report</li>
+        <li>DWB captures the email — plus rich data about that person's actual skin</li>
+        <li>Retargeting ads and Klaviyo segments become dramatically more precise: barrier concerns see Bowe Glowe, texture concerns see Exfoliation Night</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section id="team">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="phase-tag">Phase 04 · Sustain</span>
+      <h2>the roles dwb is <em>missing</em> — and how we fill them</h2>
+      <p>Five gaps in the current org. None of them requires a full-time salary on day one.</p>
+    </div>
+    <div class="roles reveal">
+      <div class="role-card">
+        <h3>project manager</h3>
+        <p>For marketing — and honestly, for everything. Coordination is the current bottleneck.</p>
+        <div class="solved">→ Chaser or Viktor covers this now</div>
+      </div>
+      <div class="role-card">
+        <h3>shopify manager</h3>
+        <p>Owns inventory, new product launches, discounts, and day-to-day store operations.</p>
+        <div class="solved">→ Contractor hire</div>
+      </div>
+      <div class="role-card">
+        <h3>developer</h3>
+        <p>Site speed, integrations, and the technical side of the website revamp.</p>
+        <div class="solved">→ Combined with the role below</div>
+      </div>
+      <div class="role-card">
+        <h3>ui/ux designer</h3>
+        <p>Product pages, conversion flows, and the visual side of the revamp — Shopify-native.</p>
+        <div class="solved">→ Vetted designer-developer contractor ready</div>
+      </div>
+      <div class="role-card">
+        <h3>customer service</h3>
+        <p>Fast, on-brand support without the overhead of an in-house team.</p>
+        <div class="solved">→ Trained VAs inside Gorgias</div>
+      </div>
+      <div class="role-card">
+        <h3>creative studio</h3>
+        <p>Photo, video, design, and editing in one place, with a strong aesthetic eye.</p>
+        <div class="solved">→ Sourcing: AI for efficiency, not deliverables</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="engage" id="engage">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="phase-tag">Engagement Options</span>
+      <h2>two ways to <em>work together</em></h2>
+      <p>Start focused or start full-scope — both are built to pay for themselves in reduced waste and better attribution alone.</p>
+    </div>
+    <div class="offers reveal">
+      <div class="offer">
+        <div class="tier">Option A · 1099 Contractor</div>
+        <h3>paid ads management &amp; consulting</h3>
+        <div class="price">5% <small>of managed ad spend / month</small></div>
+        <div class="terms">MIN $2,500 / MO · CAPPED AT $15,000 / MO</div>
+        <ul>
+          <li>Paid ads management across Meta, Google &amp; CTV</li>
+          <li>Data analytics &amp; attribution</li>
+          <li>Creative reporting</li>
+          <li>Creative strategy</li>
         </ul>
       </div>
-
-      <div class="card">
-        <div class="card-head"><span class="bar"></span><span class="label">Biggest Opportunities (ranked)</span></div>
-        <ul class="rec-list">
-          <li><b>Resolve Meta/paid ad access</b> — highest-scoring opportunity in the prioritization matrix (4.5/5): high impact, high revenue potential, lowest implementation effort of any item identified.</li>
-          <li><b>Establish website/ecommerce ownership</b> (4.0/5) — compounds AOV/CVR gains already happening organically.</li>
-          <li><b>Hire a dedicated Project Manager</b> (3.75/5) — the highest business-impact score of any opportunity, and the unlock for nearly everything else.</li>
+      <div class="offer featured">
+        <div class="tier">Option B · Full Scope</div>
+        <h3>in-house head of ecommerce</h3>
+        <div class="price">$10,000 <small>/ month</small></div>
+        <div class="terms">W2 OR 1099 · OPEN TO EQUITY OPTIONS TO LOWER CASH COST</div>
+        <ul>
+          <li>Paid ads management</li>
+          <li>Email marketing management <small>content &amp; copywriting still resourced separately</small></li>
+          <li>eCommerce tech stack ownership</li>
+          <li>Data analytics &amp; reporting</li>
+          <li>Omnichannel marketing strategy</li>
+          <li>Project management via Chaser or Viktor</li>
+          <li>Website design &amp; development oversight</li>
         </ul>
       </div>
+    </div>
+  </div>
+</section>
 
-      <div class="card">
-        <div class="card-head"><span class="bar"></span><span class="label">Biggest Risks</span></div>
-        <ul class="rec-list">
-          <li><b>Regulatory exposure ahead of the SAFE round close</b> — DWB's ~$4.9M revenue clears the MoCRA small-business exemption threshold, and compliance status has never been verified, with roughly two weeks left before the July 31, 2026 close target.</li>
-          <li><b>A single hire covering two competing workstreams</b> — the same developer profile is needed for both ecommerce ownership and marketing tech-stack integration.</li>
-          <li><b>Hiring under time pressure</b> — Whitney's stated urgency to "move fast" creates real risk of a rushed PM hire that doesn't fit the "lean, scrappy" culture she's asked for.</li>
-        </ul>
-      </div>
-
-      <div class="card">
-        <div class="card-head"><span class="bar"></span><span class="label">Recommended Priorities — First 90 Days</span></div>
-        <ul class="rec-list">
-          <li><b>Paid marketing unblocked and running</b> ahead of the fall revenue initiatives.</li>
-          <li><b>Ecommerce operations fully owned</b>, protecting and compounding AOV/CVR gains already underway.</li>
-          <li><b>Cross-functional execution unblocked</b> through dedicated project management.</li>
-          <li><b>SEO visibility and a promotional calendar established</b> ahead of the holiday selling season.</li>
-          <li><b>Regulatory compliance confirmed</b> before the SAFE round closes.</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- ============ 90-DAY ROADMAP ============ -->
-    <section class="page" id="roadmap">
-      <div class="page-top">
-        <div>
-          <span class="eyebrow">02 · Execution</span>
-          <h1 class="page-title">90-Day Roadmap</h1>
-          <p class="page-subhead">Sequenced so Quick Wins move first wherever their blockers are already resolved; everything else waits for its dependency to clear.</p>
-        </div>
-        <span class="context-pill">Target close: Jul 31, 2026</span>
-      </div>
-
-      <div class="roadmap-grid">
-        <div class="phase-card">
-          <h3>Foundation</h3>
-          <span class="phase-range">Days 1 – 30</span>
-
-          <div class="work-item">
-            <span class="pillar-tag">Revenue Engine</span>
-            <div class="ws-title">Resolve Meta/paid ad account access</div>
-            <div class="ws-meta"><b>Owner:</b> Cici / Whitney<br><b>Milestone:</b> Access confirmed within 7 days</div>
-          </div>
-          <div class="work-item">
-            <span class="pillar-tag">Operational Foundation</span>
-            <div class="ws-title">Hire dedicated Project Manager</div>
-            <div class="ws-meta"><b>Owner:</b> Whitney / Ilaa (COO)<br><b>Milestone:</b> Role filled within 30 days</div>
-          </div>
-          <div class="work-item">
-            <span class="pillar-tag">Revenue Engine</span>
-            <div class="ws-title">Complete SEO audit</div>
-            <div class="ws-meta"><b>Owner:</b> Andrew (eCC)<br><b>Milestone:</b> Audit complete within 30 days</div>
-          </div>
-          <div class="work-item">
-            <span class="pillar-tag">Revenue Engine</span>
-            <div class="ws-title">Build fall/holiday promotional calendar</div>
-            <div class="ws-meta"><b>Owner:</b> Cici<br><b>Milestone:</b> Calendar (Jul–Dec) complete within 30 days</div>
-          </div>
-          <div class="work-item">
-            <span class="pillar-tag">Risk Diversification</span>
-            <div class="ws-title">Verify MoCRA compliance status</div>
-            <div class="ws-meta"><b>Owner:</b> Whitney / legal counsel<br><b>Milestone:</b> Confirmed before SAFE round closes</div>
-          </div>
-          <div class="work-item">
-            <span class="pillar-tag">Risk Diversification</span>
-            <div class="ws-title">Establish Reddit/community sentiment baseline</div>
-            <div class="ws-meta"><b>Owner:</b> Andrew, or PM once hired<br><b>Milestone:</b> Baseline complete within 30 days</div>
-          </div>
-        </div>
-
-        <div class="phase-card">
-          <h3>Build-Out</h3>
-          <span class="phase-range">Days 31 – 60</span>
-
-          <div class="work-item">
-            <span class="pillar-tag">Operational Foundation</span>
-            <div class="ws-title">Search/hire website &amp; ecommerce ownership</div>
-            <div class="ws-meta"><b>Owner:</b> Ilaa (COO)<br><b>Dependency:</b> Clears once PM is in place<br><b>Milestone:</b> Role(s) filled within 60–90 days</div>
-          </div>
-          <div class="work-item">
-            <span class="pillar-tag">Revenue Engine</span>
-            <div class="ws-title">Implement Klaviyo (lifecycle/email)</div>
-            <div class="ws-meta"><b>Owner:</b> Ilaa (COO) / Andrew<br><b>Milestone:</b> Platform live within 60 days</div>
-          </div>
-          <div class="work-item">
-            <span class="pillar-tag">Risk Diversification</span>
-            <div class="ws-title">Ongoing Reddit/community monitoring</div>
-            <div class="ws-meta"><b>Owner:</b> Andrew / PM<br><b>Milestone:</b> Monthly cadence established</div>
-          </div>
-        </div>
-
-        <div class="phase-card">
-          <h3>Scale</h3>
-          <span class="phase-range">Days 61 – 90</span>
-
-          <div class="work-item">
-            <span class="pillar-tag">Operational Foundation</span>
-            <div class="ws-title">Onboard website/ecommerce hire(s)</div>
-            <div class="ws-meta"><b>Owner:</b> Ilaa (COO)<br><b>Milestone:</b> Q3–Q4 AOV maintains/exceeds $98.60; CVR reaches 3.3%+</div>
-          </div>
-          <div class="work-item">
-            <span class="pillar-tag">Operational Foundation</span>
-            <div class="ws-title">Consolidate creative production into 1–2 roles</div>
-            <div class="ws-meta"><b>Owner:</b> Cici<br><b>Dependency:</b> Clears once PM is in place<br><b>Milestone:</b> Consolidated to 1–2 roles/vendors</div>
-          </div>
-          <div class="work-item">
-            <span class="pillar-tag">Revenue Engine</span>
-            <div class="ws-title">Implement Triple Whale + Atria</div>
-            <div class="ws-meta"><b>Owner:</b> Andrew<br><b>Dependency:</b> Clears once ecommerce developer is onboard<br><b>Milestone:</b> Attribution live; loyalty rate trending toward 45%+</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="card" style="margin-top:1.6rem;">
-        <div class="card-head"><span class="bar"></span><span class="label">Early Confidence Wins (Days 1–30)</span></div>
-        <ul class="rec-list">
-          <li><b>Meta access resolved</b> — fastest, most visible fix in the plan; directly unblocks fall revenue initiatives.</li>
-          <li><b>SEO audit completed</b> — closes a loop already opened in the original Whitney/Andrew email exchange.</li>
-          <li><b>MoCRA verification</b> — de-risks the SAFE round close; shows investors active diligence rather than silence.</li>
-        </ul>
-      </div>
-
-      <p class="footnote"><b>Deferred past Day 90:</b> Scoping diversification beyond ~97% DTC concentration is intentionally excluded — categorized as a Long-Term Strategic Investment (90+ days), and sequenced after the operational foundation (PM, ecommerce ownership, creative consolidation) so a new channel doesn't stretch an already-understaffed team.</p>
-    </section>
-
-    <!-- ============ KPI DASHBOARD ============ -->
-    <section class="page" id="kpi">
-      <div class="page-top">
-        <div>
-          <span class="eyebrow">03 · Measurement</span>
-          <h1 class="page-title">KPI Dashboard</h1>
-          <p class="page-subhead">Baseline and target for every metric tied to a recommendation in this plan.</p>
-        </div>
-        <span class="context-pill">Baselines as of Q1 2026</span>
-      </div>
-
-      <div class="kpi-grid">
-        <div class="kpi-card">
-          <div class="kpi-label">2026 Revenue Target</div>
-          <div class="kpi-value">$7.5M</div>
-          <div class="kpi-target">↑ 50–60% vs. $4.9M (2025)</div>
-        </div>
-        <div class="kpi-card">
-          <div class="kpi-label">Average Order Value</div>
-          <div class="kpi-value">$98.60</div>
-          <div class="kpi-target">Target: maintain/exceed, +65% YoY (Q1 2026)</div>
-        </div>
-        <div class="kpi-card">
-          <div class="kpi-label">Conversion Rate</div>
-          <div class="kpi-value">3.0%</div>
-          <div class="kpi-target">Target: 3.3%+</div>
-        </div>
-        <div class="kpi-card">
-          <div class="kpi-label">Loyalty / Refill Rate</div>
-          <div class="kpi-value">38%</div>
-          <div class="kpi-target">Target: 45%+ post-Klaviyo</div>
-        </div>
-        <div class="kpi-card">
-          <div class="kpi-label">Gross Margin</div>
-          <div class="kpi-value">87%</div>
-          <div class="kpi-note">Up from 84% (Q1 2025) — protect through promo design</div>
-        </div>
-        <div class="kpi-card">
-          <div class="kpi-label">LTV / CAC</div>
-          <div class="kpi-value">3.7x</div>
-          <div class="kpi-note">CAC $61 weighted, min. 12-mo cohorts</div>
-        </div>
-        <div class="kpi-card">
-          <div class="kpi-label">Social Following</div>
-          <div class="kpi-value">1.3M</div>
-          <div class="kpi-note">vs. Dr. Idriss at 3M+ — category leader</div>
-        </div>
-        <div class="kpi-card">
-          <div class="kpi-label">Hero-SKU Retention</div>
-          <div class="kpi-value">40%+</div>
-          <div class="kpi-note">Complete unit repurchase only; 70% of products refillable</div>
-        </div>
-        <div class="kpi-card">
-          <div class="kpi-label">Key Roles Filled</div>
-          <div class="kpi-value">0 / 3</div>
-          <div class="kpi-target">Target: PM, Ecommerce Owner, Consolidated Creative — filled within 90 days</div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ CURRENT STATE ASSESSMENT ============ -->
-    <section class="page" id="current-state">
-      <div class="page-top">
-        <div>
-          <span class="eyebrow">04 · Diagnostic</span>
-          <h1 class="page-title">Current State Assessment</h1>
-          <p class="page-subhead">Twelve dimensions, scored against verified findings from discovery documents and internal notes — not general industry assumptions.</p>
-        </div>
-        <span class="context-pill">12 dimensions reviewed</span>
-      </div>
-
-      <div class="card">
-        <div class="card-head"><span class="bar"></span><span class="label">Current State</span></div>
-        <div class="tbl-wrap">
-        <table>
-          <thead><tr><th>Dimension</th><th>Status</th><th>Assessment</th><th>Priority</th></tr></thead>
-          <tbody>
-            <tr>
-              <td class="dim">Brand &amp; Positioning</td>
-              <td><span class="pill pill-yellow">Developing</span></td>
-              <td class="assess">Dr. Bowe's individual credibility is a genuine asset — 1.3M followers, 39+ TV appearances in 2025, 22 "Top Doctor" awards. But DWB's real DTC competitive set narrows to Dr. Dennis Gross, Dr. Barbara Sturm, and Dr. Idriss — and Dr. Idriss (3M+ followers, same price band) is a closer analog with a larger following.</td>
-              <td><span class="pill pill-gray">Standard</span></td>
-            </tr>
-            <tr>
-              <td class="dim">Product &amp; Clinical Validation</td>
-              <td><span class="pill pill-green">Strong</span></td>
-              <td class="assess">25 completed independent clinical studies, 3 published in peer-reviewed dermatology journals, proprietary ingredient platform (4-CLGN™, HA-Amplification). No researched competitor was confirmed to match this level of published validation.</td>
-              <td><span class="pill pill-gray">Standard</span></td>
-            </tr>
-            <tr>
-              <td class="dim">Distribution Channel Mix</td>
-              <td><span class="pill pill-yellow">Early Stage</span></td>
-              <td class="assess">~97% of revenue runs through a single channel (DTC) — the company itself flags "meaningful room for expansion." No retail, wholesale, or physician-channel presence, unlike SkinCeuticals, skinbetter science, Alastin, and ZO Skin Health.</td>
-              <td><span class="pill pill-blue">High</span><span class="conf-dots"><span class="d on"></span><span class="d on"></span><span class="d"></span></span></td>
-            </tr>
-            <tr>
-              <td class="dim">Website &amp; Ecommerce Operations</td>
-              <td><span class="pill pill-red">Gap</span></td>
-              <td class="assess">Reported metrics look healthy (Q1 2026 AOV $98.60, +65% YoY; 3.0% CVR; 87% gross margin) but no confirmed owner: Shopify Manager, Developer, and UI/UX Designer are explicitly listed as missing roles.</td>
-              <td><span class="pill pill-red">Critical</span></td>
-            </tr>
-            <tr>
-              <td class="dim">Lead Generation &amp; Paid Marketing</td>
-              <td><span class="pill pill-yellow">Early Stage</span></td>
-              <td class="assess">Meta/paid marketing and SEO sit with Cici, but Whitney's own email raises whether Meta access was ever granted; a full audit is scheduled but not yet complete.</td>
-              <td><span class="pill pill-blue">High</span><span class="conf-dots"><span class="d on"></span><span class="d"></span><span class="d"></span></span></td>
-            </tr>
-            <tr>
-              <td class="dim">Customer Journey &amp; Validation Surfaces</td>
-              <td><span class="pill pill-red">Gap</span></td>
-              <td class="assess">Reddit (r/SkincareAddiction specifically) is the dominant post-TikTok validation surface for skincare buyers; DWB's own Reddit/community sentiment was never assessed.</td>
-              <td><span class="pill pill-blue">High</span><span class="conf-dots"><span class="d on"></span><span class="d"></span><span class="d"></span></span></td>
-            </tr>
-            <tr>
-              <td class="dim">Retention Systems</td>
-              <td><span class="pill pill-yellow">Partial</span></td>
-              <td class="assess">Reported numbers are strong on paper — 38% loyalty rate, 40%+ hero-SKU retention, 70% refillable — but Klaviyo (email/lifecycle) is listed as "to add," meaning no dedicated retention platform is active yet.</td>
-              <td><span class="pill pill-blue">High</span><span class="conf-dots"><span class="d on"></span><span class="d on"></span><span class="d on"></span></span></td>
-            </tr>
-            <tr>
-              <td class="dim">Marketing Infrastructure &amp; Tech Stack</td>
-              <td><span class="pill pill-red">Gap</span></td>
-              <td class="assess">Triple Whale (attribution), Klaviyo (email), Atria (ads management), and a Haut.ai-type tool are all listed as "to add" — attribution, retention, and lead-capture infrastructure is not yet built.</td>
-              <td><span class="pill pill-red">Critical</span></td>
-            </tr>
-            <tr>
-              <td class="dim">Content Production Pipeline</td>
-              <td><span class="pill pill-yellow">Developing</span></td>
-              <td class="assess">A content pipeline already exists and is documented, but Andrew recommends consolidating photographer/videographer/graphics/video-editing into one or two people — current production is fragmented.</td>
-              <td><span class="pill pill-gray">Standard</span></td>
-            </tr>
-            <tr>
-              <td class="dim">Team &amp; Organizational Structure</td>
-              <td><span class="pill pill-red">Gap</span></td>
-              <td class="assess">Head of Finance &amp; Operations is "Contract in Process," a new COO (Ilaa) is onboarding, and there is no Project Manager — Andrew directly flagged this as "a highly recommended hire."</td>
-              <td><span class="pill pill-red">Critical</span></td>
-            </tr>
-            <tr>
-              <td class="dim">Regulatory / Compliance Posture (MoCRA)</td>
-              <td><span class="pill pill-red">Gap</span></td>
-              <td class="assess">MoCRA obligations are mandatory above the ~$1M/year small-business threshold, which DWB's ~$4.9M 2025 revenue clears by a wide margin. No information exists on DWB's actual registration/listing status.</td>
-              <td><span class="pill pill-red">Critical</span><span class="conf-dots"><span class="d on"></span><span class="d"></span><span class="d"></span></span></td>
-            </tr>
-            <tr>
-              <td class="dim">Financial Position / Capital Raise</td>
-              <td><span class="pill pill-yellow">Developing</span></td>
-              <td class="assess">Revenue +70% in 2025 to ~$4.9M, targeting +50–60% in 2026 (~$7.5M), with an open SAFE round ($20M cap, 15% discount) targeted to close July 31, 2026 — in progress, not yet closed.</td>
-              <td><span class="pill pill-blue">High</span><span class="conf-dots"><span class="d on"></span><span class="d on"></span><span class="d on"></span></span></td>
-            </tr>
-          </tbody>
-        </table>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ COMPETITOR BENCHMARK ============ -->
-    <section class="page" id="benchmark">
-      <div class="page-top">
-        <div>
-          <span class="eyebrow">05 · Diagnostic</span>
-          <h1 class="page-title">Competitor Benchmark</h1>
-          <p class="page-subhead">Condensed from the full 8-competitor scorecard (SkinCeuticals, skinbetter science, iS Clinical, Alastin, Dr. Dennis Gross, Dr. Barbara Sturm, Dr. Idriss, ZO Skin Health) — showing DWB's score against the category leader on each dimension.</p>
-        </div>
-        <span class="context-pill">8 competitors researched</span>
-      </div>
-
-      <div class="card">
-        <div class="card-head"><span class="bar"></span><span class="label">DWB vs. Category Leader, by Dimension</span></div>
-        <div class="tbl-wrap">
-        <table>
-          <thead><tr><th>Dimension</th><th>DWB</th><th>Category Leader</th><th>Position</th></tr></thead>
-          <tbody>
-            <tr><td class="dim">Positioning Clarity</td><td><span class="pill pill-blue">4/5</span></td><td>SkinCeuticals / Dr. Dennis Gross / Alastin / Dr. Idriss — 4/5</td><td class="assess">At parity with most of the category on clarity of positioning.</td></tr>
-            <tr><td class="dim">Website UX</td><td><span class="pill pill-yellow">2/5</span></td><td>Dr. Dennis Gross / Dr. Barbara Sturm — 4/5</td><td class="assess">Behind: no confirmed Shopify/dev/design owner, vs. mature multi-retailer or feature-rich ecommerce builds.</td></tr>
-            <tr><td class="dim">SEO Strength</td><td><span class="pill pill-yellow">2/5</span></td><td>SkinCeuticals / Dr. Dennis Gross / Dr. Barbara Sturm — 4/5</td><td class="assess">Behind: SEO audit pending, no confirmed organic footprint yet.</td></tr>
-            <tr><td class="dim">Content Quality/Depth</td><td><span class="pill pill-blue">4/5</span></td><td>Dr. Idriss — 5/5</td><td class="assess">Close behind category leader; Idriss's #PillowtalkDerm educational heritage edges out DWB's clinical-study content.</td></tr>
-            <tr><td class="dim">Offers/Promotions</td><td><span class="pill pill-gray">3/5</span></td><td>Dr. Barbara Sturm — 5/5</td><td class="assess">Average: bundled programs exist (Skin Cycling $199, Daily Staples $170) but no discount/urgency mechanics found.</td></tr>
-            <tr><td class="dim">Social Media Presence</td><td><span class="pill pill-blue">4/5</span></td><td>Dr. Idriss — 5/5 (3M+ followers)</td><td class="assess">Strong, but behind the single closest competitor by follower count.</td></tr>
-            <tr><td class="dim">Paid Ads Visibility</td><td><span class="pill pill-yellow">2/5</span></td><td>No verified data for any competitor</td><td class="assess">DWB is the only brand with a documented signal here — and it's a concern (unresolved Meta access), not a strength.</td></tr>
-            <tr><td class="dim">Trust Signals</td><td><span class="pill pill-green">5/5</span></td><td>Tied: Dr. Dennis Gross / Dr. Idriss — 5/5</td><td class="assess">Category-leading: published studies, Dr. Bowe's credentials, TV press, product awards.</td></tr>
-          </tbody>
-        </table>
-        </div>
-      </div>
-      <p class="footnote">Note: several "clinical rigor" peers named in DWB's own competitive positioning (skinbetter science, Alastin, ZO Skin Health, iS Clinical) are physician-dispensed only — not sold DTC at all. DWB's real head-to-head DTC set is Dr. Dennis Gross, Dr. Barbara Sturm, and Dr. Idriss.</p>
-    </section>
-
-    <!-- ============ OPERATIONAL FOUNDATION ============ -->
-    <section class="page" id="op-foundation">
-      <div class="page-top">
-        <div>
-          <span class="eyebrow">06 · Growth Strategy</span>
-          <h1 class="page-title">Operational Foundation</h1>
-          <p class="page-subhead">People and process recommendations — the unlock for every other workstream in this plan.</p>
-        </div>
-        <span class="context-pill">Pillar A</span>
-      </div>
-
-      <div class="card">
-        <div class="card-head"><span class="bar"></span><span class="label">Recommendations</span></div>
-        <div class="tbl-wrap">
-        <table>
-          <thead><tr><th>Recommendation</th><th>Timeframe</th><th>KPI Target</th><th>Owner</th></tr></thead>
-          <tbody>
-            <tr>
-              <td class="dim">Hire a dedicated Project Manager</td>
-              <td><span class="pill pill-green">Quick Win</span></td>
-              <td class="assess">Role filled within 30 days; cross-team blocker resolution &lt;3 business days</td>
-              <td>Whitney / Ilaa</td>
-            </tr>
-            <tr>
-              <td class="dim">Establish website/ecommerce ownership</td>
-              <td><span class="pill pill-yellow">Medium-Term</span></td>
-              <td class="assess">Role(s) filled within 60–90 days; AOV holds ≥$98.60; CVR reaches 3.3%+</td>
-              <td>Ilaa (COO)</td>
-            </tr>
-            <tr>
-              <td class="dim">Consolidate creative production into 1–2 roles</td>
-              <td><span class="pill pill-yellow">Medium-Term</span></td>
-              <td class="assess">Consolidated to 1–2 roles/vendors; cadence baseline set</td>
-              <td>Cici</td>
-            </tr>
-          </tbody>
-        </table>
-        </div>
-      </div>
-      <p class="footnote">Andrew has offered to serve as interim Project Manager while a permanent search runs — a decision worth making explicitly rather than defaulting into it.</p>
-    </section>
-
-    <!-- ============ WEBSITE, SEO & ECOMMERCE ============ -->
-    <section class="page" id="website-seo">
-      <div class="page-top">
-        <div>
-          <span class="eyebrow">07 · Growth Strategy</span>
-          <h1 class="page-title">Website, SEO &amp; Ecommerce</h1>
-          <p class="page-subhead">Protecting and compounding gains that are already happening organically, before they're systematically owned.</p>
-        </div>
-        <span class="context-pill">Pillar B</span>
-      </div>
-
-      <div class="card">
-        <div class="card-head"><span class="bar"></span><span class="label">Recommendations</span></div>
-        <div class="tbl-wrap">
-        <table>
-          <thead><tr><th>Recommendation</th><th>Timeframe</th><th>KPI Target</th><th>Owner</th></tr></thead>
-          <tbody>
-            <tr>
-              <td class="dim">Complete the SEO audit</td>
-              <td><span class="pill pill-green">Quick Win</span></td>
-              <td class="assess">Audit complete within 30 days; organic-session baseline established</td>
-              <td>Andrew (eCC)</td>
-            </tr>
-            <tr>
-              <td class="dim">Hire Shopify Manager + Developer/UI-UX</td>
-              <td><span class="pill pill-yellow">Medium-Term</span></td>
-              <td class="assess">Filled within 60–90 days; Q3–Q4 AOV ≥$98.60; CVR 3.3%+</td>
-              <td>Ilaa (COO)</td>
-            </tr>
-            <tr>
-              <td class="dim">Build fall/holiday promotional calendar</td>
-              <td><span class="pill pill-green">Quick Win</span></td>
-              <td class="assess">Calendar (Jul–Dec 2026) complete within 30 days, covering eye cream launch &amp; ABC Deals &amp; Steals</td>
-              <td>Cici</td>
-            </tr>
-          </tbody>
-        </table>
-        </div>
-      </div>
-      <p class="footnote">Risk to watch: discount-heavy promotions could compress DWB's currently strong 87% gross margin — model margin impact before finalizing discount depth, favoring bundles/gifts-with-purchase over straight percentage-off.</p>
-    </section>
-
-    <!-- ============ PAID ADS & RETENTION SYSTEMS ============ -->
-    <section class="page" id="paid-retention">
-      <div class="page-top">
-        <div>
-          <span class="eyebrow">08 · Growth Strategy</span>
-          <h1 class="page-title">Paid Ads &amp; Retention Systems</h1>
-          <p class="page-subhead">Unblocking acquisition and systematizing the retention performance already happening organically.</p>
-        </div>
-        <span class="context-pill">Pillar B</span>
-      </div>
-
-      <div class="card">
-        <div class="card-head"><span class="bar"></span><span class="label">Recommendations</span></div>
-        <div class="tbl-wrap">
-        <table>
-          <thead><tr><th>Recommendation</th><th>Timeframe</th><th>KPI Target</th><th>Owner</th></tr></thead>
-          <tbody>
-            <tr>
-              <td class="dim">Resolve Meta/paid ad account access</td>
-              <td><span class="pill pill-green">Quick Win</span></td>
-              <td class="assess">Access confirmed within 7 days; campaigns live before eye cream launch</td>
-              <td>Cici / Whitney</td>
-            </tr>
-            <tr>
-              <td class="dim">Implement Klaviyo (lifecycle/email)</td>
-              <td><span class="pill pill-yellow">Medium-Term</span></td>
-              <td class="assess">Live within 60 days; loyalty rate trending toward 45%+ (from 38%)</td>
-              <td>Ilaa (COO) / Andrew</td>
-            </tr>
-            <tr>
-              <td class="dim">Implement Triple Whale (attribution) + Atria (ads mgmt)</td>
-              <td><span class="pill pill-yellow">Medium-Term</span></td>
-              <td class="assess">Live within 60 days of start; depends on ecommerce developer being onboard</td>
-              <td>Andrew</td>
-            </tr>
-          </tbody>
-        </table>
-        </div>
-      </div>
-      <p class="footnote">Sequencing note: Klaviyo first (least dev-dependent, highest self-reported organic demand signal), then Triple Whale, then Atria — not a simultaneous rollout.</p>
-    </section>
-
-    <!-- ============ CONTENT & SOCIAL ============ -->
-    <section class="page" id="content-social">
-      <div class="page-top">
-        <div>
-          <span class="eyebrow">09 · Growth Strategy</span>
-          <h1 class="page-title">Content &amp; Social</h1>
-          <p class="page-subhead">Matching the content cadence that drives discovery in this category, and closing the gap to the nearest competitor.</p>
-        </div>
-        <span class="context-pill">Pillar A / C</span>
-      </div>
-
-      <div class="card">
-        <div class="card-head"><span class="bar"></span><span class="label">Recommendation</span></div>
-        <div class="tbl-wrap">
-        <table>
-          <thead><tr><th>Recommendation</th><th>Timeframe</th><th>KPI Target</th><th>Owner</th></tr></thead>
-          <tbody>
-            <tr>
-              <td class="dim">Consolidate photo/video/graphics/editing into 1–2 roles</td>
-              <td><span class="pill pill-yellow">Medium-Term</span></td>
-              <td class="assess">Consolidated within 60–90 days; content cadence baseline established</td>
-              <td>Cici</td>
-            </tr>
-            <tr>
-              <td class="dim">Establish Reddit/community sentiment baseline</td>
-              <td><span class="pill pill-green">Quick Win</span></td>
-              <td class="assess">Baseline (r/SkincareAddiction and related threads) within 30 days</td>
-              <td>Andrew / PM</td>
-            </tr>
-          </tbody>
-        </table>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-head"><span class="bar"></span><span class="label">Competitive Context</span></div>
-        <p style="color:var(--ink-soft);font-size:.88rem;line-height:1.65;margin:0;">
-          DWB's 1.3M followers and 11.2M+ views (last 6 months) are a real asset, but Dr. Idriss — the closest DTC comparable brand — has built 3M+ followers on a consistent, solo-creator educational cadence (#PillowtalkDerm) since 2018. TikTok Shop reached $4.4B in U.S. health &amp; beauty sales, and Reddit (specifically r/SkincareAddiction) is now the dominant validation surface skincare buyers check before purchasing — a surface DWB has not yet monitored.
-        </p>
-      </div>
-    </section>
-
-    <!-- ============ KEY OPPORTUNITIES ============ -->
-    <section class="page" id="opportunities">
-      <div class="page-top">
-        <div>
-          <span class="eyebrow">10 · Opportunities &amp; Risks</span>
-          <h1 class="page-title">Key Opportunities</h1>
-          <p class="page-subhead">Ranked by Priority Score — (Business Impact + Revenue Potential + Implementation Effort + Confidence) ÷ 4.</p>
-        </div>
-        <span class="context-pill">10 opportunities scored</span>
-      </div>
-
-      <div class="item-card">
-        <div class="item-head"><span class="item-title">Resolve Meta/paid ad account access</span><span class="pill pill-red">Priority 4.5</span></div>
-        <div class="item-body">Unblocks fall 2026 campaigns; lowest implementation effort of any opportunity, high confidence.</div>
-      </div>
-      <div class="item-card">
-        <div class="item-head"><span class="item-title">Build owned ecommerce/website function</span><span class="pill pill-red">Priority 4.0</span></div>
-        <div class="item-body">Compounds already-improving AOV (+65% YoY) and CVR (3.0%).</div>
-      </div>
-      <div class="item-card">
-        <div class="item-head"><span class="item-title">Hire a dedicated Project Manager</span><span class="pill pill-blue">Priority 3.75</span></div>
-        <div class="item-body">Highest business-impact score of any opportunity — unlocks nearly every other item on this list.</div>
-      </div>
-      <div class="item-card">
-        <div class="item-head"><span class="item-title">Complete the SEO audit</span><span class="pill pill-blue">Priority 3.5</span></div>
-        <div class="item-body">Already scoped in the original Whitney/Andrew email exchange; very low effort to execute.</div>
-      </div>
-      <div class="item-card">
-        <div class="item-head"><span class="item-title">Implement attribution + lifecycle tooling</span><span class="pill pill-gray">Priority 3.25</span></div>
-        <div class="item-body">Triple Whale, Klaviyo, Atria — systematizes the 38% loyalty rate already happening organically.</div>
-      </div>
-      <div class="item-card">
-        <div class="item-head"><span class="item-title">Build a defined promotional calendar</span><span class="pill pill-gray">Priority 3.25</span></div>
-        <div class="item-body">Targets DWB's own named fall/holiday revenue moments; closes gap to Dr. Barbara Sturm's promo mechanics.</div>
-      </div>
-      <div class="item-card">
-        <div class="item-head"><span class="item-title">Diversify beyond 97% DTC concentration</span><span class="pill pill-gray">Priority 2.75</span></div>
-        <div class="item-body">Named directly in DWB's own investor pitch as an untapped lever; high effort, longer ramp.</div>
-      </div>
-      <div class="item-card">
-        <div class="item-head"><span class="item-title">Consolidate fragmented creative production</span><span class="pill pill-gray">Priority 2.75</span></div>
-        <div class="item-body">Matches the content cadence of category-leading competitors like Dr. Idriss.</div>
-      </div>
-      <div class="item-card">
-        <div class="item-head"><span class="item-title">Establish Reddit/community sentiment visibility</span><span class="pill pill-gray">Priority 2.5</span></div>
-        <div class="item-body">Closes a data gap — value depends entirely on what the baseline scan finds.</div>
-      </div>
-      <div class="item-card">
-        <div class="item-head"><span class="item-title">Verify MoCRA compliance ahead of investor diligence</span><span class="pill pill-gray">Priority 2.0</span></div>
-        <div class="item-body">Low revenue upside, but time-critical given the SAFE round's ~2-week runway — priority score and urgency are not the same axis here.</div>
-      </div>
-    </section>
-
-    <!-- ============ KEY RISKS ============ -->
-    <section class="page" id="risks">
-      <div class="page-top">
-        <div>
-          <span class="eyebrow">11 · Opportunities &amp; Risks</span>
-          <h1 class="page-title">Key Risks</h1>
-          <p class="page-subhead">Highest-severity risks identified across the recommendation set, each with its stated mitigation.</p>
-        </div>
-        <span class="context-pill">6 risks tracked</span>
-      </div>
-
-      <div class="item-card">
-        <div class="item-head"><span class="item-title">Regulatory gap surfaces during SAFE-round diligence</span><span class="pill pill-red">Severity: High</span></div>
-        <div class="item-body">DWB's ~$4.9M revenue clears the MoCRA exemption threshold; compliance status is unverified with ~2 weeks left before the stated close target. <b>Mitigation:</b> complete a documented verification/gap assessment even if full resolution isn't possible in time.</div>
-      </div>
-      <div class="item-card">
-        <div class="item-head"><span class="item-title">Single hire covering two competing workstreams</span><span class="pill pill-red">Severity: High</span></div>
-        <div class="item-body">The same developer profile is needed for both ecommerce ownership and tech-stack integration. <b>Mitigation:</b> raise sequencing explicitly with Ilaa before finalizing hiring scope, rather than assuming one hire carries both.</div>
-      </div>
-      <div class="item-card">
-        <div class="item-head"><span class="item-title">Rushed Project Manager hire</span><span class="pill pill-yellow">Severity: Medium</span></div>
-        <div class="item-body">Time pressure to "move fast" risks a hire that doesn't fit the "lean, scrappy" culture Whitney wants. <b>Mitigation:</b> use Andrew as interim PM while running a proper search in parallel.</div>
-      </div>
-      <div class="item-card">
-        <div class="item-head"><span class="item-title">Promotions compress gross margin</span><span class="pill pill-yellow">Severity: Medium</span></div>
-        <div class="item-body">DWB's 87% gross margin is a genuine asset; discount-heavy mechanics could erode it. <b>Mitigation:</b> model margin impact before finalizing discount depth; favor bundles/gifts-with-purchase.</div>
-      </div>
-      <div class="item-card">
-        <div class="item-head"><span class="item-title">Overreacting to early Reddit sentiment</span><span class="pill pill-yellow">Severity: Medium</span></div>
-        <div class="item-body">A handful of vocal posts could be mistaken for a broader trend. <b>Mitigation:</b> treat the first pass strictly as a baseline/listening exercise, not a trigger for response actions.</div>
-      </div>
-      <div class="item-card">
-        <div class="item-head"><span class="item-title">Creative consolidation loses specialist depth</span><span class="pill pill-yellow">Severity: Medium</span></div>
-        <div class="item-body">Combining photo/video/graphics into fewer roles risks losing a specialist's eye for high-stakes work (investor materials, TV segments). <b>Mitigation:</b> pilot one combined role before fully consolidating; keep a specialist bench.</div>
-      </div>
-    </section>
-
-    <!-- ============ FINAL RECOMMENDATIONS ============ -->
-    <section class="page" id="final-recs">
-      <div class="page-top">
-        <div>
-          <span class="eyebrow">12 · Opportunities &amp; Risks</span>
-          <h1 class="page-title">Final Recommendations</h1>
-          <p class="page-subhead">The condensed close-out — five outcomes to hold the team accountable to over the next 90 days.</p>
-        </div>
-        <span class="context-pill">Prepared for Whitney &amp; leadership</span>
-      </div>
-
-      <div class="card">
-        <ul class="rec-list">
-          <li><b>Unblock paid marketing now</b> — Meta access is the single lowest-effort, highest-priority-score fix available; resolve it this week, not this quarter.</li>
-          <li><b>Put a Project Manager in place within 30 days</b> — nearly every other gap in this plan depends on it, and Andrew has already offered to bridge the gap in the interim.</li>
-          <li><b>Give the website and ecommerce engine a real owner</b> — AOV and conversion rate are already improving; protect that trend before it stalls from lack of attention.</li>
-          <li><b>Verify regulatory standing before the SAFE round closes</b> — a two-week runway doesn't guarantee full resolution, but it's enough time to know where DWB stands and say so to investors.</li>
-          <li><b>Sequence deliberately</b> — hold channel diversification until the operational foundation (PM, ecommerce, creative) is in place; don't let ambition outrun the team's current capacity.</li>
-        </ul>
-      </div>
-    </section>
-
-  </main>
-</div>
+<footer>
+  <div class="wrap foot">
+    <h2>ready when <em>you</em> are.</h2>
+    <div class="fine">
+      Prepared for Dr. Whitney Bowe Beauty<br>
+      GM / Chief Growth Officer Proposal · 2026<br>
+      <a href="https://ecommcartel.co/dwb/content-pipeline" target="_blank" rel="noopener">Content Pipeline</a> · <a href="https://docs.google.com/spreadsheets/d/1aVjV_QhxF8Vtr7Yj75mEqFOpCf1d7aH_4MLoJtARsvQ/edit?usp=sharing" target="_blank" rel="noopener">Ad Tracking Sheet</a>
+    </div>
+  </div>
+</footer>
 
 <script>
-  const navItems = document.querySelectorAll('.nav-item');
-  const pages = document.querySelectorAll('.page');
-  navItems.forEach(item => {
-    item.addEventListener('click', () => {
-      const target = item.getAttribute('data-page');
-      navItems.forEach(n => n.classList.remove('active'));
-      item.classList.add('active');
-      pages.forEach(p => p.classList.remove('active'));
-      const el = document.getElementById(target);
-      if (el) { el.classList.add('active'); }
-      document.querySelector('.content').scrollTo({top:0,behavior:'instant'});
-      window.scrollTo({top:0,behavior:'instant'});
-    });
-  });
+const obs = new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); obs.unobserve(e.target); } });
+},{threshold:0.12});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
 </script>
+
 </body>
 </html>
